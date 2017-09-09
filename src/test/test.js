@@ -1,12 +1,15 @@
 import { expect } from 'chai';
 
 import { nativeSort } from '../algorithms/native'
+import { bubbleSort } from '../algorithms/bubble'
 import { getRandomInt } from '../utils/random'
 
-const listOfSortFunctions = [nativeSort]
+const listOfSortFunctions = [nativeSort, bubbleSort]
 
 const checkSortFunction = (sortFunction, array) => {
-  expect(array.sort((a, b) => { return a - b })).to.deep.equal(sortFunction(array))
+  const arr1 = array.slice(0);
+  const arr2 = array.slice(0);
+  expect(arr1.sort((a, b) => { return a - b })).to.deep.equal(sortFunction(arr2))
 }
 
 describe('Testing of all sort algorithms', function () {
