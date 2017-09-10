@@ -2,9 +2,10 @@ import { expect } from 'chai';
 
 import { nativeSort } from '../algorithms/native'
 import { bubbleSort, bubbleSortWithAdvancedSwap, bubbleSortWithFlag } from '../algorithms/bubble'
+import { selectionSort } from '../algorithms/selection'
 import { getRandomInt } from '../utils/random'
 
-const listOfSortFunctions = [nativeSort, bubbleSort, bubbleSortWithAdvancedSwap, bubbleSortWithFlag]
+const listOfSortFunctions = [nativeSort, bubbleSort, bubbleSortWithAdvancedSwap, bubbleSortWithFlag, selectionSort]
 
 const checkSortFunction = (sortFunction, array) => {
   const arr1 = array.slice(0);
