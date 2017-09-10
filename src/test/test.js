@@ -9,7 +9,8 @@ const listOfSortFunctions = [nativeSort, bubbleSort, bubbleSortWithAdvancedSwap,
 const checkSortFunction = (sortFunction, array) => {
   const arr1 = array.slice(0);
   const arr2 = array.slice(0);
-  expect(arr1.sort((a, b) => { return a - b })).to.deep.equal(sortFunction(arr2))
+  const answer = arr1.sort((a, b) => { return a - b });
+  expect(answer).to.deep.equal(sortFunction(arr2))
 }
 
 describe('Testing of all sort algorithms', function () {
