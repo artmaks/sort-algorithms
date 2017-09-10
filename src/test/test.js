@@ -4,10 +4,11 @@ import { nativeSort } from '../algorithms/native'
 import { bubbleSort, bubbleSortWithAdvancedSwap, bubbleSortWithFlag } from '../algorithms/bubble'
 import { selectionSort } from '../algorithms/selection'
 import { insertionSort, shellSort } from '../algorithms/insertion'
+import { mergeSort } from '../algorithms/merge'
 import { getRandomInt } from '../utils/random'
 
 const listOfSortFunctions = [nativeSort, bubbleSort, bubbleSortWithAdvancedSwap, bubbleSortWithFlag, 
-  selectionSort, insertionSort, shellSort ]
+  selectionSort, insertionSort, shellSort, mergeSort ]
 
 const checkSortFunction = (sortFunction, array) => {
   const arr1 = array.slice(0);
@@ -17,7 +18,7 @@ const checkSortFunction = (sortFunction, array) => {
 }
 
 const isSlowSortFunction = (sortFunction) => {
-  return !['nativeSort', 'insertionSort', 'shellSort'].includes(sortFunction.name)
+  return !['nativeSort', 'insertionSort', 'shellSort', 'mergeSort'].includes(sortFunction.name)
 }
 
 describe('Testing of all sort algorithms', function () {
