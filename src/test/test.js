@@ -6,10 +6,11 @@ import { selectionSort } from '../algorithms/selection'
 import { insertionSort, shellSort } from '../algorithms/insertion'
 import { mergeSort } from '../algorithms/merge'
 import { quickSort } from '../algorithms/qsort'
+import { quickSortES6, quickSortFunctional } from '../algorithms/qsort/es6'
 import { getRandomInt } from '../utils/random'
 
 const listOfSortFunctions = [nativeSort, bubbleSort, bubbleSortWithAdvancedSwap, bubbleSortWithFlag, 
-  selectionSort, insertionSort, shellSort, mergeSort, quickSort ]
+  selectionSort, insertionSort, shellSort, mergeSort, quickSort, quickSortES6, quickSortFunctional ]
 
 const checkSortFunction = (sortFunction, array) => {
   const arr1 = array.slice(0);
@@ -19,7 +20,7 @@ const checkSortFunction = (sortFunction, array) => {
 }
 
 const isSlowSortFunction = (sortFunction) => {
-  return !['nativeSort', 'insertionSort', 'shellSort', 'mergeSort', 'quickSort'].includes(sortFunction.name)
+  return !['nativeSort', 'insertionSort', 'shellSort', 'mergeSort', 'quickSort', 'quickSortES6'].includes(sortFunction.name)
 }
 
 describe('Testing of all sort algorithms', function () {
@@ -46,6 +47,7 @@ describe('Testing of all sort algorithms', function () {
       describe('Large Array (1.000 items) with random elements from 0 to 9999', function () {
         for(let i = 0; i < 100; i++) {
           it(`should sort array #${i}`, function () {
+            this.timeout(10000);
             const largeArray = new Array(1000).fill(0).map(() => getRandomInt(0, 1000));
             checkSortFunction(sortFunction, largeArray)
           })
