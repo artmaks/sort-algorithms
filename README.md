@@ -19,3 +19,14 @@ In every iteration of selection sort, the minimum element from the unsorted suba
 Disadvantage: very slow on the sorted or partially sorted array (in each case O(n^2))
 
 The good thing about selection sort is it never makes more than O(n) swaps and can be useful when memory write is a costly operation.
+
+### Bubble Sort
+
+Bubble sort is a simple sorting algorithm that repeatedly steps through the list to be sorted, compares each pair of adjacent items and swaps them if they are in the wrong order.
+
+- Worst-case performance = **О(n^2)**
+- Best-case performance = **О(n)**
+- Average performance = **О(n^2)**
+- Worst-case space complexity =	**О(n)** total, **O(1)** auxiliary
+
+Implementation with a flag for detecting swapping more faster than selection sort in many cases.
