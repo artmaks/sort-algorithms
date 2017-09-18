@@ -45,3 +45,14 @@ Insertion sort is a simple sorting algorithm that works the way we sort playing 
 Advantages:
  - More efficient in practice than most other simple quadratic (i.e., O(n^2)) algorithms such as selection sort or bubble sort
  
+ ### Shell Sort
+ 
+ ShellSort is mainly a variation of Insertion Sort. In insertion sort, we move elements only one position ahead. When an element has to be moved far ahead, many movements are involved. The idea of shellSort is to allow exchange of far items. In shellSort, we make the array h-sorted for a large value of h. We keep reducing the value of h until it becomes 1. An array is said to be h-sorted if all sublists of every h’th element is sorted.
+
+- Worst-case performance:
+  - **O(n^2)** (worst known gap sequence)
+  - **O(nlog2n)** (best known gap sequence)
+- Best-case performance:
+  - **O(n log n)**
+- Average performance	depends on gap sequence
+- Worst-case space complexity	**О(n)** total, **O(1)** auxiliary
