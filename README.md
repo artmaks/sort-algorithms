@@ -30,3 +30,18 @@ Bubble sort is a simple sorting algorithm that repeatedly steps through the list
 - Worst-case space complexity =	**О(n)** total, **O(1)** auxiliary
 
 Implementation with a flag for detecting swapping more faster than selection sort in many cases.
+
+### Insertion Sort
+
+Insertion sort is a sorting algorithm in which the elements are transferred one at a time to the right position. In other words, an insertion sort helps in building the final sorted list, one item at a time, with the movement of higher-ranked elements. An insertion sort has the benefits of simplicity and low overhead.
+
+Insertion sort is a simple sorting algorithm that works the way we sort playing cards in our hands.
+
+- Worst-case performance	**О(n^2)** comparisons, swaps
+- Best-case performance	**O(n)** comparisons, **O(1)** swaps
+- Average performance	**О(n^2)** comparisons, swaps
+- Worst-case space complexity	**О(n)** total, **O(1)** auxiliary
+
+Advantages:
+ - More efficient in practice than most other simple quadratic (i.e., O(n^2)) algorithms such as selection sort or bubble sort
+ 
