@@ -70,7 +70,7 @@ Like QuickSort, Merge Sort is a Divide and Conquer algorithm. It divides input a
   - **О(n)** total
   - **O(n)** auxiliary
   
-  ### Quick Sort
+### Quick Sort
   
 Like Merge Sort, QuickSort is a Divide and Conquer algorithm. It picks an element as pivot and partitions the given array around the picked pivot. There are many different versions of quickSort that pick pivot in different ways.
 
@@ -98,3 +98,14 @@ Here is one algorithm to partition the array, which I try to present in a way th
   - Otherwise, continue opening the next card.
 - Swap the last closed card with the pivot (if any).
 - Open all cards… You will see that the array is already partitioned!
+
+**Perfomance and complexity:**
+
+- Worst-case performance	**O(n^2)**
+- Best-case performance	
+  - **O(n log n)** (simple partition)
+  - **O(n)** (three-way partition and equal keys)
+- Average performance	**O(n log n)**
+- Worst-case space complexity	
+  - **O(n)** auxiliary (naive)
+  - **O(log n)** auxiliary 
