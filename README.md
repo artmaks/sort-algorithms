@@ -56,3 +56,5 @@ Advantages:
   - **O(n log n)**
 - Average performance	depends on gap sequence
 - Worst-case space complexity	**О(n)** total, **O(1)** auxiliary
+
+### Merge Sort
